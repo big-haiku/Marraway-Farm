@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+
+/* ------------------------------------------------------------- */
+
+/* General Styles */
+
+/* ------------------------------ */
+
+/* Font Families */
+.cormorant-garamond-regular {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.cormorant-garamond-heavy {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.cormorant-garamond-italic {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.cormorant-garamond-heavy-italic {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* ------------------------------ */
+
+/* Font Sizes */
+.title-text {
+    font-size: 3.8vw;
+    text-wrap: nowrap;
+    text-shadow: 0 0 3rem black;
+}
+.small-title-text {
+    font-size: 2vw;
+    text-shadow: 0 0 2rem black;
+}
+.standard-text {
+    font-size: 1.5rem;
+}
+
+/* ------------------------------ */
+
+        /* Media Queries for Font Sizes */
+        @media (max-width: 1399px) {
+            .small-title-text {
+                font-size: 2.8vw;
+            }
+        }
+        @media (max-width: 1199px) {
+            .title-text {
+                font-size: 6vw;
+            }
+            .small-title-text {
+                font-size: 3.6vw;
+            }
+        }
+        @media (max-width: 576px) {
+            .title-text {
+                font-size: 2rem;
+            }
+            .small-title-text {
+                font-size: 1.4rem;
+            }
+        }
+
+/* ------------------------------ */
+
+/* Background and Shell */
+.main-background {
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+/* ------------------------------ */
+
+/* Navbar Styles */
+.nav-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+}
+#navbarNav ul {
+    padding-top: 0.8vw;
+    width: 100%;
+    user-select: none;
+}
+.nav-item {
+    text-align: end;
+}
+
+/* Custom style for the navbar-toggler */
+.custom-toggler {
+    border-color: #fff; /* Change the outline color */
+    width: 7vw; /* Adjust the width using vw */
+    height: 5vw; /* Adjust the height using vw */
+    min-width: 55px;
+    min-height: 35px;
+}
+
+/* Custom style for the navbar-toggler-icon */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    height: 90%;
+    width: 80%;
+}
+
+/* ------------------------------ */
+
+/* Navbar Underline Effect */
+.nav-link {
+    position: relative;
+    transition: all 0.15s ease-out;
+}
+    .nav-link:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff; /* Use the desired color for the underline */
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.25s cubic-bezier(1, .25, 0, .75) 0s;
+    }
+    .nav-link:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+/* ------------------------------ */
+
+        /* Media Queries for Navbar */
+        @media (max-width: 1399px) {
+            #navbarNav ul {
+                padding-top: 0;
+            }
+        }
+        @media (max-width: 1199px) {
+            .home-shell nav {
+                padding: 3vh 3vw;
+            }
+            #navbarNav ul {
+                background: rgba(43, 18, 7, 0.596);
+                width: min-content;
+                border-radius: 1rem;
+                padding: 1rem 2rem;
+                margin-top: 1rem;
+                float: right;
+            }
+            #navbarNav ul li {
+                width: min-content;
+                text-wrap: nowrap; /* Note: 'text-wrap' is not valid */
+            }
+        }
+
+/* ------------------------------ */
+
+/* Footer Styles */
+.footer {
+    padding: 3vh 3vw;
+}
+    .footer-wrapper {
+        border-top: 1px solid rgba(128, 128, 128, 0.232);
+        padding-top: 1rem;
+    }
+        .footer-nav {
+            gap: 1.5rem;
+        }
+
+/* End of General Styles */
+
+
+
+/* ------------------------------------------------------------- */
+
+/* Home Styles */
+
+/* ------------------------------ */
+
+/* Home Hero */
+.home-background {
+    background-image: url(Assets/sunrise-bush.jpg);
+}
+.home-shell {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding: 1.5vh 2vw;
+}
+    .hero-tag {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        top: 64%;
+        user-select: none;
+    }
+        .whitespace {
+            white-space: pre;
+        }
+        .fade-box {
+            display: flex;
+            flex-direction: column;
+            width: 6vw;
+            text-align: center;
+            position: relative;
+        }
+
+/* ------------------------------ */
+
+/* Media Queries for Home Hero */
+        @media (max-width: 1199px) {
+            .fade-box {
+                width: 9.8vw;
+            }
+        }
+        @media (max-width: 626px) {
+            .fade-box {
+                margin: 0 1vw;
+            }
+        }
+        /* Title Padding for Mobile */
+        @media (max-width: 576px) {
+            .home-shell h1 {
+                padding: 1vh 1vh;
+            }
+        }
+        @media (max-width: 415px) {
+            .fade-box {
+                margin: 0 3vw 0 1vw;
+            }
+        }
+
+/* ------------------------------ */
+
+/* Lower Home Info Section */
+.lower-home {
+    padding-top: 2rem;
+}
+    .home-banner {
+        align-items: stretch;
+        gap: 4rem;
+        padding: 2rem 4rem;
+    }
+    .home-banner-item {
+        flex: 1;
+        min-height: 20rem;
+        background: rgba(121, 121, 121, 0.031);
+        box-shadow: 0 0.6rem 1.5rem 0.2rem rgba(0, 0, 0, 0.274);
+        border-radius: 2vw;
+        overflow: hidden;
+        align-items: stretch;
+        cursor: pointer;
+        transition: transform 0.2s ease-out; /* Smooth transition for the upward shift */
+        opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Initially translated down */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+    }
+    .home-banner-item.visible {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+    .home-banner-item:hover {
+        transform: translateY(-5px); /* Slight upward shift */
+    }
+        .banner-item-splash{
+            background-size: cover !important;
+            background-position: center !important;
+            width: 25%;
+            min-height: 100%;
+        }
+        .bookings-splash {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(Assets/woodland_1.jpg);
+        }
+        .store-splash {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(Assets/vases.jpg);
+        }
+        .about-splash {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(Assets/farm_wide.jpg);
+        }
+        .contact-splash {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(Assets/telephone.jpg);
+        }
+        .banner-item-textbox {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+        }
+            .banner-item-textbox h3 {
+                font-size: 2rem;
+                text-decoration: underline;
+            }
+            .banner-item-textbox span {
+                font-size: 1.4rem;
+            }
+            .home-divider {
+                width: 70vw;
+                margin: 4vh auto 0;
+                border-bottom: 1px solid rgba(175, 175, 175, 0.261);
+            }
+            .home-divider-small {
+                width: 50vw;
+                margin: 3vh auto;
+                border-bottom: 1px solid rgba(175, 175, 175, 0.261);
+            }
+
+/* ------------------------------ */
+
+/* Lower Home Fade Animation */
+.fade-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-item.active {
+    display: block;
+}
+
+/* ------------------------------ */
+           
+/* Lower Home Media Queries */
+        @media (max-width: 700px) {
+            .home-banner {
+                padding: 2rem 1rem;
+            }
+            .banner-item-textbox h3 {
+                font-size: 1.6rem;
+            }
+            .banner-item-textbox span {
+                font-size: 1rem;
+            }
+        }
+            
+/* End of Home Styles */
+
+
+
+/* ------------------------------------------------------------- */
+
+/* Bookings Styles*/
+
+/* ------------------------------ */
+
+/* Bookings Hero */
+.bookings-background {
+    background-image: 
+        radial-gradient(circle at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 70%),
+        url(Assets/farm_sunset.JPG);
+}
+    .room-hero-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+        .room-hero {
+            border-radius: 1rem;
+            padding: 3rem;
+            box-shadow: 0 1rem 3rem 0.2rem black;
+            min-width: 330px;
+            max-width: 820px;
+        }
+            .room-hero h3 {
+                font-size: 2.8rem;
+            }
+        .down-button {
+            position: absolute;
+            left: 50%;
+            top: 110%;
+            transform: translate(-50%, 0);
+            font-size: 6rem;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+/* ------------------------------ */
+
+/* Rooms Display Section */
+    .room-container {
+        margin: 6vh auto;
+        gap: 6rem;
+        height: 60%;
+    }
+        .room-box {
+            min-width: 44vw;
+            border-radius: 3rem;
+            background: rgba(255, 255, 255, 0.946);
+            box-shadow: 0 1rem 3rem 0.2rem black;
+            padding: 2rem;
+            max-height: 525px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        .room-box.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+            .room-text-wrapper {
+                overflow-y: scroll;
+            }
+                .room-title {
+                    font-size: 3rem;
+                }
+                .room-text-wrapper span {
+                    flex-grow: 1;
+                    overflow-y: auto;
+                    padding-right: 1rem;
+                }
+            .room-gallery-wrapper {
+                background: grey;
+                min-width: 40%;
+                max-width: 40%;
+                border-radius: 2rem;
+                margin-left: 2rem;
+                min-height: 100%;
+                position: relative;
+                overflow: hidden;
+            }
+                .room-gallery {
+                    display: flex;
+                    scroll-behavior: smooth;
+                    overflow-x: scroll;
+                    scroll-snap-type: x mandatory;
+                    height: 100%;
+                }
+                    .room-gallery div {
+                        min-height: 100%;
+                        background-position: center;
+                        background-size: cover;
+                        min-width: 100%;
+                        flex-shrink: 0;
+                        scroll-snap-align: start;
+                    }
+                    .kookaburra_1 {
+                        background-image: url(Assets/kookaburra_1.jpg);
+                    }
+                    .kookaburra_2 {
+                        background-image: url(Assets/kookaburra_2.jpg);
+                    }
+                    .kookaburra_3 {
+                        background-image: url(Assets/kookaburra_3.jpg);
+                    }
+                    .kookaburra_bathroom {
+                        background-image: url(Assets/kookaburra_bathroom.jpg);
+                    }
+                    .woodland_1 {
+                        background-image: url(Assets/woodland_1.jpg);
+                    }
+                    .woodland_2 {
+                        background-image: url(Assets/woodland_2.jpg);
+                    }
+                    .woodland_3 {
+                        background-image: url(Assets/woodland_3.jpg);
+                    }
+                    .woodland_bathroom {
+                        background-image: url(Assets/woodland_bathroom.jpg);
+                    }
+                /* Gallery Scroll Buttons */
+                .gallery-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    cursor: pointer;
+                    border-radius: 0.2rem;
+                    z-index: 10;
+                }
+                .left-btn {
+                    left: 10px;
+                }
+                .right-btn {
+                    right: 10px;
+                }
+
+/* ------------------------------ */
+
+/* Rooms Display Media Queries */
+        @media (max-width: 1106px) {
+            .room-hero {
+                padding: 1.5rem;
+            }
+                .room-hero h3 {
+                    font-size: 2rem;
+                }
+                .room-hero span {
+                    font-size: 1.2rem;
+                }
+            .room-down-button {
+                font-size: 4.5rem;
+            }
+            .room-container {
+                gap: 3rem;
+            }
+            .room-title {
+                font-size: 2rem;
+            }
+            .room-text-wrapper a {
+                font-size: 1.2rem;
+            }
+            .room-text-wrapper span {
+                font-size: 1.2rem;
+                padding-right: 0.5rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .room-box {
+                max-height: 1600px;
+            }
+            .room-gallery-wrapper {
+                min-height: 20rem;
+                min-width: 100%;
+                margin: 1rem 0 0 0;
+            }
+                .room-gallery div {
+                    min-height: 20rem;
+                }
+        }
+
+/* End of Bookings Styles */
+
+
+
+/* ------------------------------------------------------------- */
+
+/* About Us Page Styles */
+
+/* ------------------------------ */
+
+/* About Us Hero */
+.about-background {
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.22) 50%, rgba(0, 0, 0, 0.5) 70%), url(Assets/sheep_2.jpg);
+}
+
+
+
+/* End of About Us Styles */
+
+
+
+/* ------------------------------------------------------------- */
+
+/* Contact Page Styles */
+
+/* ------------------------------ */
+
+/* Contact Hero */
+.contact-background {
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 70%), url(Assets/launceston_1.jpg);
+}
+#down-arrow-contact {
+    opacity: 1;
+}
+
+/* ------------------------------ */
+
+/* Lower Contact */
+.contact-details {
+    /* display: flex; */
+}
+    .form-container {
+        border-radius: 3rem;
+        background: rgba(255, 255, 255, 0.946);
+        box-shadow: 0 1rem 3rem 0.2rem black;
+        padding: 2rem;
+    }
+        .form-header h2 {
+            font-size: 2.5rem;
+        }
+        .form-header p {
+            font-size: 1.7rem;
+        }
+        .form-wrapper div form textarea {
+            height: 140px;
+        }
+
+/* Lower Contact Media Queries */
+@media (max-width: 992px) {
+    .form-container {
+        width: 95vw;
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+}
+
+/* End of Contact Styles */

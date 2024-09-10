@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marraway Farm - Bookings</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="bookings-background main-background"></div>
+    <section class="home-shell container-fluid">
+        <!-- Title -->
+        <h1 class="cormorant-garamond-regular text-light title-text"><a href="index.html" class="text-decoration-none text-reset">MARRAWAY FARM</a></h1>
+        <!-- Navbar -->
+        <nav class="col-6 justify-content-between navbar navbar-expand-xl navbar-light nav-container">
+            <!-- Toggler button -->
+            <button class="custom-toggler ms-auto navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto justify-content-around cormorant-garamond-regular small-title-text">
+                    <li class="nav-item">
+                        <a href="bookings.html" class="nav-link text-light underline-effect">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="store.html" class="nav-link text-light underline-effect">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link text-light underline-effect">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link text-light underline-effect">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="room-hero-container">
+            <div class="room-hero bg-light">
+                <h3 class="cormorant-garamond-italic">Looking for your next getaway?</h3>
+                <span class="cormorant-garamond-regular standard-text">Check out our two five-star rooms, located deep in the heart of Tasmania's beautiful Tamar Valley. Enjoy the rural luxury of a stately home hosted by an Airbnb certified superhost.</span>
+            </div>
+            <span class="material-symbols-outlined text-light down-button" id="down-arrow">arrow_circle_down</span>
+        </div>
+
+    </section>
+    
+    <!-- Rooms -->
+    <section class="room-section" id="room-scrollto">
+        <div class="room-container container d-flex flex-column flex-xxl-row justify-content-around">
+            <div class="room-box d-flex flex-md-row flex-column">
+                <div class="room-text-wrapper d-flex flex-column">
+                    <h3 class="room-title cormorant-garamond-italic text-decoration-underline">The Kookaburra Room</h3>
+                    <a href="https://www.airbnb.com.au/rooms/1058971694526181337" class="cormorant-garamond-italic standard-text">Check out the Kookaburra Room on Airbnb</a>
+                    <span class="cormorant-garamond-regular standard-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus obcaecati reprehenderit atque odit quidem quos, sunt omnis eius esse facilis itaque quam numquam est voluptas tenetur quibusdam porro sequi. Laborum consequatur facilis corporis sequi, minus vitae quaerat consequuntur! Tempore nam possimus placeat quam ut unde vitae obcaecati voluptas! Placeat.</span>
+                </div>
+                <div class="room-gallery-wrapper">
+                    <button class="gallery-btn left-btn">←</button>
+                    <div class="room-gallery">
+                        <div class="kookaburra_1"></div>
+                        <div class="kookaburra_2"></div>
+                        <div class="kookaburra_3"></div>
+                        <div class="kookaburra_bathroom"></div>
+                        <!-- Add more images as needed -->
+                    </div>
+                    <button class="gallery-btn right-btn">→</button>
+                </div>                    
+            </div>
+            <div class="room-box d-flex flex-md-row flex-column">
+                <div class="room-text-wrapper d-flex flex-column">
+                    <h3 class="room-title cormorant-garamond-italic text-decoration-underline">The Woodland Room</h3>
+                    <a href="https://www.airbnb.com.au/rooms/1058964634133470377" class="cormorant-garamond-italic standard-text">Check out the Woodland Room on Airbnb</a>
+                    <span class="cormorant-garamond-regular standard-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus obcaecati reprehenderit atque odit quidem quos, sunt omnis eius esse facilis itaque quam numquam est voluptas tenetur quibusdam porro sequi. Laborum consequatur facilis corporis sequi, minus vitae quaerat consequuntur! Tempore nam possimus placeat quam ut unde vitae obcaecati voluptas! Placeat.</span>
+                </div>
+                <div class="room-gallery-wrapper">
+                    <button class="gallery-btn left-btn">←</button>
+                    <div class="room-gallery">
+                        <div class="woodland_1"></div>
+                        <div class="woodland_2"></div>
+                        <div class="woodland_3"></div>
+                        <div class="woodland_bathroom"></div>
+                        <!-- Add more images as needed -->
+                    </div>
+                    <button class="gallery-btn right-btn">→</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer standard-text">
+        <div class="cormorant-garamond-regular footer-wrapper d-flex flex-column flex-md-row justify-content-between">
+            <span class="footer-brand">2024 Marraway Farm</span>
+            <nav class="footer-nav d-flex">
+                <a href="bookings.html" class="footer-link text-dark">Bookings</a>
+                <a href="store.html" class="footer-link text-dark">Store</a>
+                <a href="about.html" class="footer-link text-dark">About Us</a>
+                <a href="contact.html" class="footer-link text-dark">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
