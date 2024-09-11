@@ -179,6 +179,32 @@ html, body {
 
 /* ------------------------------ */
 
+/* Hero styles */
+.hero-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .hero-text-wrapper {
+        border-radius: 1rem;
+        padding: 3rem;
+        box-shadow: 0 1rem 3rem 0.2rem black;
+        min-width: 330px;
+        max-width: 820px;
+        display: flex;
+        flex-direction: column;
+    }
+        .hero-text-wrapper h3 {
+            font-size: 2.8rem;
+        }
+        .hero-text-wrapper a {
+            font-size: 1.4rem;
+            margin: auto;
+        }
+
+/* ------------------------------ */
+
 /* Footer Styles */
 .footer {
     padding: 3vh 3vw;
@@ -374,22 +400,6 @@ html, body {
         radial-gradient(circle at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 70%),
         url(Assets/farm_sunset.JPG);
 }
-    .room-hero-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-        .room-hero {
-            border-radius: 1rem;
-            padding: 3rem;
-            box-shadow: 0 1rem 3rem 0.2rem black;
-            min-width: 330px;
-            max-width: 820px;
-        }
-            .room-hero h3 {
-                font-size: 2.8rem;
-            }
         .down-button {
             position: absolute;
             left: 50%;
@@ -614,3 +624,19 @@ html, body {
 }
 
 /* End of Contact Styles */
+
+/* ------------------------------------------------------------- */
+
+/* Thankyou Page Styles */
+
+/* ------------------------------ */
+
+/* Thankyou Hero */
+
+.thank-background {
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 70%), url(Assets/forest.jpg);
+}
+.thank-hero-text {
+    margin: auto;
+    padding: 1rem;
+}
