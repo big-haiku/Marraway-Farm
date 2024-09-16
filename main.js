@@ -95,4 +95,16 @@ if (downArrowContact) {
     });
 }
 
+// For about-scrollto
+const downArrowAbout = document.getElementById('down-arrow-about');
+if (downArrowAbout) {
+    downArrowAbout.addEventListener('click', function() {
+        console.log('Down arrow clicked'); // Debugging line
+        const aboutSection = document.getElementById('about');
+        aboutSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+}
 

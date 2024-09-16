@@ -185,6 +185,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    min-width: 340px;
 }
     .hero-text-wrapper {
         border-radius: 1rem;
@@ -197,6 +198,7 @@ html, body {
     }
         .hero-text-wrapper h3 {
             font-size: 2.8rem;
+            text-decoration: underline;
         }
         .hero-text-wrapper a {
             font-size: 1.4rem;
@@ -403,12 +405,23 @@ html, body {
         .down-button {
             position: absolute;
             left: 50%;
-            top: 110%;
-            transform: translate(-50%, 0);
+            bottom: -70%;
+            transform: translate(-50%, -50%);
             font-size: 6rem;
             opacity: 0.7;
             cursor: pointer;
         }
+
+/* ------------------------------ */
+
+/* Down Button Media Queries */
+
+@media (max-height: 840px) {
+    .down-button {
+        font-size: 4rem;
+        top: 130%;
+    }
+}
 
 /* ------------------------------ */
 
@@ -543,7 +556,13 @@ html, body {
                 padding-right: 0.5rem;
             }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 769px) {
+            .bookings-hero h3 {
+                font-size: 1.6rem;
+            }
+            .bookings-hero span {
+                font-size: 1.2rem;
+            }
             .room-box {
                 max-height: 1600px;
             }
@@ -559,6 +578,15 @@ html, body {
 
 /* End of Bookings Styles */
 
+/* ------------------------------------------------------------- */
+
+/* Store Page Styles */
+
+/* ------------------------------ */
+
+.store-background {
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.22) 50%, rgba(0, 0, 0, 0.5) 70%), url(Assets/red-sunset-on-tasmanian-farm-.jpg);
+}
 
 
 /* ------------------------------------------------------------- */
@@ -572,7 +600,43 @@ html, body {
     background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.22) 50%, rgba(0, 0, 0, 0.5) 70%), url(Assets/sheep_2.jpg);
 }
 
+/* About Us Content */
+.about-container {
+    border-radius: 3rem;
+    background: rgba(255, 255, 255, 0.946);
+    box-shadow: 0 1rem 3rem 0.2rem black;
+    max-width: 80vw;
+    margin: auto;
+    overflow: hidden;
+}
+    .bridge-splash {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(Assets/bridge.jpg);
+    }
+        .about-text h3 {
+            font-size: 2.8rem;
+        }
 
+/* ------------------------------ */
+
+/* About Us Media Queries */
+
+@media (max-width: 769px) {
+    .about-hero {
+    }
+        .about-hero h3 {
+            font-size: 2rem!important;
+        }
+    .bridge-splash {
+        height: 15rem;
+        width: 100%;
+    }
+    .about-text {
+        width: 100%;
+    }
+        .about-text h3 {
+            font-size: 1.6rem;
+        }
+}
 
 /* End of About Us Styles */
 
